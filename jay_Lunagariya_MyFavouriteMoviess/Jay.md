@@ -120,4 +120,28 @@ whether a Content item exists with that title or not.
 The message was displayed under this search, with red text when the title doesn't exist, and
 green text when it does exist.
 
+***********
+***********
+Assignment-4
+************
+************
+
+Changed the version in my package.json to 0.0.4.
+
+In my Content-Card, if the imgURL was not set, displayed a default image on the card
+instead (use an image relevant to your theme), using either *ngIf or *ngSwitch. In my
+Content-List component, added or edited some elements to your array of Content so I
+had at least 1 item with no imgUrl set, to make sure this new functionality works correctly.
+
+Created an attribute directive called Hover-Affect. Applied this attribute directive to my
+type in your Content-Card, and use it to add an underline to the type when a user
+hovers over the type, and remove the underline when they hovered away from the type.
+
+Used the same directive to bold the individual tags when a user hovers over one, and
+removed the bold when they hover away.
+
+Made sure it operates on each individual tag and not just on all the tags at the same time.
+
+
+
 

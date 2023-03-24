@@ -1,7 +1,21 @@
-<ng-container *ngIf="image">
-  <img [src]="image">
-</ng-container>
-
-<ng-container *ngIf="tags && tags.length">
-  <p>Tags: {{tags.join(', ')}}</p>
-</ng-container>
+<div class="content-card">
+  <div class="card-img">
+    <img *ngIf="content.imgUrl; else defaultImage" [src]="content.imgUrl" (click)="displayContentInfo()"/>
+  </div>
+  <ng-template #defaultImage>
+    <img src="https://www.example.com/default-image.jpg" (click)="displayContentInfo()"/>
+  </ng-template>
+  <div class="card-info">
+    <h3>{{ content.title }}</h3>
+    <p>{{ content.description }}</p>
+    <p>Creator: {{ content.creator }}</p>
+    <p>Type: {{ content.type }}</p>
+    <ul>
+      <li *ngFor="let tag of content.tags">{{ tag }}</li>
+    </ul>
+  </div>
+  <p class="type" appHoverAffect>{{ content.type }}</p>
+</div>
+<div class="tags">
+  <span *ngFor="let tag of content.tags" hoverAffect="bold">{{ tag }}</span>
+</div>
