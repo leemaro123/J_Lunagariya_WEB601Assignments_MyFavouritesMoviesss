@@ -59,3 +59,29 @@ Assignment-2
 
 Deleted the ContentList class implementation from the Content-card code, and
 deleted the content-list.ts helper file.
+
+Created a new component called Content-list
+In my Content-list component, defined an array of 6 or more Content items's.
+Using an ngFor directive in my Content-list's html file, displayed 5 Content-card's
+by passing in the values from my Content array
+
+Content-card's should be display the Content passed into it as follows:
+
+Each Content-card tag has a 1 pixel border applied to it
+The title should be in a header tag
+The image, description, creator, type and tags are visible inside of the box. Styles and
+positioning of these elements are your choice, so long as they're in the card. (Hint:
+remember that your tags is an array)
+Clicking on the image displays the Content's id and title in the console
+Added any necessary padding, and margins as you see fit
+
+The first content card displayed should have a black solid border of 2 pixels around it.
+
+In my app-root component, remove my Content-card from the html and instead add
+my Content-list to the html, so that it can be displayed on the home page of your
+application. If i have not already done so I can delete all the extra html in the app-root
+that was automatically added by the default angular application.
+
+Do not displayed, or attempt to displayed, the type, image or tags on the
+Content-card if their value is not set
+
