@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-list.component.css']
 })
 export class ContentListComponent implements OnInit {
+  searchTitle: string | undefined;
+  searchResult: { message: string; color: string; } | undefined;
   contents = [
     {
       id: 1,
@@ -13,7 +15,6 @@ export class ContentListComponent implements OnInit {
       image: 'https://via.placeholder.com/150x150',
       description: 'This was good movie',
       creator: 'Salman Khan',
-      type: 'Action',
       tags: ['Tag 1', 'Tag 2']
     },
     {
@@ -30,7 +31,6 @@ export class ContentListComponent implements OnInit {
       title: 'War',
       description: 'This is the third content',
       creator: 'Shroff',
-      type: 'Action',
       tags: ['Tag3', 'Tag4'],
       image: 'https://via.placeholder.com/150'
     },
@@ -69,7 +69,15 @@ export class ContentListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {}
+
+  searchByTitle() {
+    const content = this.contents.find((c) => c.title === this.searchTitle);
+    if (content) {
+      this.searchResult = { message: `Content with title "${this.searchTitle}" exists.`, color: 'green' };
+    } else {
+      this.searchResult = { message: `Content with title "${this.searchTitle}" doesn't exist.`, color: 'red' };
+    }
   }
 
 }

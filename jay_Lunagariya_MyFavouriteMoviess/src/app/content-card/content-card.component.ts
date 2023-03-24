@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Content} from "@angular/compiler";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
     <app-content-card></app-content-card>
   `,
 })
-export class AppComponent {
+export class ContentCardComponent {
+  @Input() content: Content;
+
+  get typeClass() {
+    return `content-type-${this.content.type || 'none'}`;
+  }
 }

@@ -85,3 +85,39 @@ that was automatically added by the default angular application.
 Do not displayed, or attempt to displayed, the type, image or tags on the
 Content-card if their value is not set
 
+***********
+***********
+Assignment-3
+************
+************
+
+The package.json was changed to 0.0.3 and additional content was added to the array to ensure 
+it had at least 7 content items. 
+
+The content items were updated to use two different type values, and some with no type set.
+
+A pipe was created and given a relevant name that accepts a single optional string parameter. 
+This pipe is used to filter an array of Content, returning only the Content that has its type
+equal to the string passed to the pipe. 
+
+If no value is passed in, then the pipe returns a filtered array of Content that has no type set.
+
+Alter the html that displayed your on your Content-List component so that it displayed
+separate lists by type using your pipe.
+
+Style the listed Content-Card's differently by using different font or background colours for
+the card tag itself, based on their type. 
+
+There should be a clear difference between the colour styling from one card with a certain type versus one with
+another type.
+
+On your Content-List component, add an input field at the very top of the page that users
+may enter the title of a Content item. 
+
+Next to the input field, add a button that, when clicked, it displayed a message about 
+whether a Content item exists with that title or not. 
+
+The message was displayed under this search, with red text when the title doesn't exist, and
+green text when it does exist.
+
+
