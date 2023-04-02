@@ -143,5 +143,42 @@ removed the bold when they hover away.
 Made sure it operates on each individual tag and not just on all the tags at the same time.
 
 
+***********
+***********
+Assignment-5
+************
+************
 
+Used my completed assignment 4 as a base line.
+
+Changed the version in my package.json to 0.0.5.
+Add a component to your application called CreateContent and add this component to
+the top of your ContentList.
+
+In this new component, add an input field for all the necessary fields to make a piece of
+content, including the ID, followed by a button. When the button is clicked, send the new
+content item up from the CreateContent component to the ContentList using the
+promise pattern. 
+
+When the new piece of content was successfully sent from the
+CreateContent component using that pattern, the resolved promise should invoke a
+success function that will add a message to the console saying the addition is successful,
+along with the title of the content, and the input fields in the CreateContent's html file
+should be cleared of their current values. When the ContentList receives the new content
+item, display the new item on the ContentList using my preexisting *ngFor's that still
+have the pipes operating on them (hint: The easiest way to test this will be to add content
+with a type that is already being filtered for by a pipe. And don't forget to clone!)
+
+If the content fails to be added (you don't need to cause it to fail, just handle the situation when
+the promise fails), the resulting rejected promise should display an error message, in bolded
+red text, under the submit button stating that the content failed to be added. When the content
+is successfully submitted after a failed attempt, the error message should also be cleared.
+
+Used this promise setup to also do error checking for required fields
+(based on the required properties of your Content interface). If a required field is not
+submitted, reject the promise, do not try to emit the content, and display the an error
+message, in red, saying the user must try to create the content again with the required fields
+filled in.
+
+Assignment-6
 
